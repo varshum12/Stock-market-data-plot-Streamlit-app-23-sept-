@@ -1,0 +1,8 @@
+pandas 
+numpy
+streamlit
+ipykernel
+requests
+plotly
+BeautfulSoup
+bs4
