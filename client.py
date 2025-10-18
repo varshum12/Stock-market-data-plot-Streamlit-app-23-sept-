@@ -1,6 +1,7 @@
 import  requests
 import  streamlit as st 
 import pandas as pd
+import plotly.graph_objects  as  go
 class  STOCK_API:
     def __init__(self ):
         self.api_key  =  st.secrets['API_KEY']
@@ -56,8 +57,8 @@ class  STOCK_API:
         return  df
 
     #  plot candelstick chart
-    def  plot(self , symbol ):
-        df  =  self.time_series_daily(symbol)
+    def  plot(self  ,symbol ):
+        df = self.time_series_daily()
         fig = go.Figure(data=[go.Candlestick(x=df.index,
                 open=df['1. open'],
                 high=df['2. high'],
