@@ -1,5 +1,6 @@
 from  client import STOCK_API
 import streamlit as st
+import plotly.graph_objects as go
 
 
 ## add  page  title
