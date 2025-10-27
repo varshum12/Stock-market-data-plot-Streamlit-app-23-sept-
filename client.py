@@ -58,6 +58,7 @@ class  STOCK_API:
 
     #  plot candelstick chart
     def  plot(self , df):
+        import plotly.graph_objects as  go 
         
         fig = go.Figure(data=[go.Candlestick(x=df.index,
                 open=df['1. open'],

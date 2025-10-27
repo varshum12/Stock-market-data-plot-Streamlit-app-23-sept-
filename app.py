@@ -52,7 +52,7 @@ if  company:
             fig  =  graph(symbol =  option)
             st.plotly_chart(fig)
     else:
-        print('Company doesn"t  exists')
+        st.warning('Company doesn"t  exists')
 
 
 
