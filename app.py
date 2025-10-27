@@ -12,7 +12,7 @@ st.subheader('By varsha Mhetre')
 
 company =  st.text_input('Company Name')
 
-st.cache_resource(ttl  =  3600)
+@st.cache_resource(ttl  =  3600)
 def fetch_data():
     return STOCK_API()
 
@@ -20,22 +20,19 @@ stock_api  =  fetch_data()
 
 
 ## create  function to search symbol
-st.cache_data(ttl  =  3600)
+@st.cache_data(ttl  =  3600)
 def get_symbol(company_name):
     return stock_api.search_symbol(company_name)
 
-## create  function  to fetch time  series data
-st.cache_data(ttl  =  3600)
-def time_series_data(symbol):
-    return  stock_api.time_series_daily( symbol)
+
+
 
 
 ## create function  for  plot
-st.cache_data(ttl  =  3600)
+@st.cache_data(ttl  =  3600)
 def graph(symbol):
-    
-    return stock_api.plot(symbol)
-
+   df1  =  stock_api.time_series_daily(symbol)
+   return stock_api.plot(df1)
 
 ## make  it functional 
 if  company:
