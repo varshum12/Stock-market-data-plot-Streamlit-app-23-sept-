@@ -43,7 +43,7 @@ if  company:
         option  =  st.selectbox('Symbol' ,  company_symbols)
         company_name  =  st.success(f'**Company Name**, {company_data[option][0]}')
         company_region  =  st.success(f'**Company region**, {company_data[option][1]}')
-        company_Currency  =  st.success(f'**Company Name**, {company_data[option][2]}')
+        company_Currency  =  st.success(f'**Company Currency**, {company_data[option][2]}')
 
 
         plot_graph  =  st.button('Plot' ,  type= 'primary')
