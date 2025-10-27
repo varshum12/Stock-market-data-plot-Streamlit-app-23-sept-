@@ -1,8 +1,7 @@
-import  requests
-import os
+import requests
 import pandas as pd
-import streamlit as st
 import plotly.graph_objects as go
+import streamlit as st
 class  STOCK_API:
     def __init__(self ):
         self.api_key  =  st.secrets['API_KEY']
